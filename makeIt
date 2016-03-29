@@ -1,0 +1,6 @@
+[ -e build ] && rm -rf build
+mkdir build
+cd build
+export INSTALL_PREFIX=`pwd`
+cmake .. && make
+make DESTDIR=$INSTALL_PREFIX install 
